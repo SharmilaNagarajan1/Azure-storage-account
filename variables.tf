@@ -4,12 +4,12 @@ variable "resource_group_name" {
 
 variable "location" {
   type    = string
-  default = "East US"
+  default = "Australia East"
 }
 
 variable "storage_account_name" {
   type    = string
-  default = "sharmistorageacc121025"
+  default = "sharmistorageacc131025"
 }
 
 variable "workspace_name" {
