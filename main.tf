@@ -21,7 +21,7 @@ provider "azurerm" {
   features {}
   }
 
-module "storageAccount" {
+module "storageAcc" {
   source = "./modules/storageAccount"
   
   resource_group_name   = var.resource_group_name
