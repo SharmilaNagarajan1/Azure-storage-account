@@ -1,4 +1,4 @@
-output "storage-acc-id" {
+output "storage_acc_id" {
   description = "The id of StorageAccount"
-  value = module.storageAccount.id
+  value = module.storageAcc.storage_account_id
 }
