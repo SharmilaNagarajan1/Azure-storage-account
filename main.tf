@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     azurerm = {
@@ -9,22 +8,12 @@ terraform {
 }
 
 provider "azurerm" {
-  features {} 
-}
-
-resource "azurerm_resource_group" "rg" {
-  name     = "my_rg"
-  location = "East US"
-}
-
-resource "azurerm_storage_account" "st_acc" {
-  name                     = "mystorageaccount12345"
-  resource_group_name      = azurerm_resource_group.rg.name
-  location                 = azurerm_resource_group.rg.location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
-
-  tags = {
-    environment = "staging"
+  features {}
   }
+
+module "storageAccount" {
+  source = "./modules/storageAccount"
+  resource_group_name   = var.resource_group_name
+  location              = var.location
+  storage_account_name  = var.storage_account_name
 }
