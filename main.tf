@@ -5,6 +5,16 @@ terraform {
       version = "4.47.0"
     }
   }
+
+  backend "remote" {
+    organization = "Sharmila"
+
+    workspaces {
+      name = var.workspace_name
+    }
+    
+  }
+
 }
 
 provider "azurerm" {
@@ -12,7 +22,7 @@ provider "azurerm" {
   }
 
 module "storageAccount" {
-  source = "git::https://github.com/SharmilaNagarajan1/Terraform-Module-for-Azure-Storage-with-workflow.git//modules/storageAccount?ref=main"
+  source = "./modules/storageAccount"
   
   resource_group_name   = var.resource_group_name
   location              = var.location
