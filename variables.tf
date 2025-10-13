@@ -12,4 +12,9 @@ variable "storage_account_name" {
   default = "mynewstorageacc121025"
 }
 
+variable "workspace_name" {
+  type = string
+  default = "Azure-storage-account-feature"
+}
+
 
