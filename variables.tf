@@ -4,7 +4,7 @@ variable "resource_group_name" {
 
 variable "location" {
   type    = string
-  default = "East US"
+  default = "Australia East"
 }
 
 variable "storage_account_name" {

@@ -11,10 +11,8 @@ terraform {
 
     workspaces {
       name = var.workspace_name
-    }
-    
+    }    
   }
-
 }
 
 provider "azurerm" {
