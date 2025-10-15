@@ -9,7 +9,7 @@ variable "location" {
 
 variable "storage_account_name" {
   type    = string
-  default = "sharmistorageacc131025"
+  default = "sharmistorageacc151025"
 }
 
 variable "workspace_name" {
