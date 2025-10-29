@@ -1,8 +1,8 @@
 variable "name_prefix" {
-  type = string
+  type        = string
   description = "Prefix for the storage account name"
-  default = "storageAcc"
-  
+  default     = "storageAcc"
+
 }
 
 variable "location" {
@@ -11,9 +11,9 @@ variable "location" {
 }
 
 variable "account_replication_type" {
-  type = string
+  type        = string
   description = "The replication type of the storage account"
-  default = "LRS"
+  default     = "LRS"
 
 }
 
