@@ -6,13 +6,14 @@ terraform {
     }
   }
 
-  backend "remote" {
-    organization = "Sharmila"
+  cloud { 
+    
+    organization = "Sharmila" 
 
-    workspaces {
-      name = "storage-account-demo-workspace"
-    }    
-  }
+    workspaces { 
+      name = "storage-account-demo-workspace" 
+    } 
+  } 
 }
 
 provider "azurerm" {
