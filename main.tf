@@ -1,28 +1,8 @@
-terraform {
-  required_providers {
-    azurerm = {
-      source = "hashicorp/azurerm"
-      version = "4.47.0"
-    }
-  }
 
-  backend "remote" {
-    organization = "Sharmila"
-
-    workspaces {
-      name = var.workspace_name
-    }    
-  }
-}
-
-provider "azurerm" {
-  features {}
-  }
-
-module "storageAcc" {
-  source = "./modules/storageAccount"
-  
-  resource_group_name   = var.resource_group_name
-  location              = var.location
-  storage_account_name  = var.storage_account_name
+module "storageAccount" {
+  source  = "app.terraform.io/Sharmila/storageAccount/azurerm"
+  version = "1.0.0"
+  account_replication_type = var.account_replication_type
+  location = var.loaction
+  name_prefix = var.name_prefix
 }

@@ -1,5 +1,8 @@
-variable "resource_group_name" {
-  default = "my-rg"
+variable "name_prefix" {
+  type = string
+  description = "Prefix for the storage account name"
+  default = "stacc"
+  
 }
 
 variable "location" {
@@ -7,14 +10,13 @@ variable "location" {
   default = "Australia East"
 }
 
-variable "storage_account_name" {
-  type    = string
-  default = "sharmistorageacc151025"
+variable "account_replication_type" {
+  type = string
+  description = "The replication type of the storage account"
+  default = "LRS"
+
 }
 
-variable "workspace_name" {
-  type = string
-  default = "Azure-storage-account-feature"
-}
+
 
 
