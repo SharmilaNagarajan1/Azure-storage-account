@@ -6,14 +6,12 @@ terraform {
     }
   }
 
-  cloud { 
-    
-    organization = "Sharmila" 
-
-    workspaces { 
-      name = "storage-account-demo-workspace" 
-    } 
-  } 
+  cloud {
+    organization = "Sharmila"
+    workspaces {
+      name = "storage-account-demo-workspace"
+    }
+  }
 }
 
 provider "azurerm" {
