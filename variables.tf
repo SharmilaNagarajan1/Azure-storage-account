@@ -1,7 +1,7 @@
 variable "name_prefix" {
   type = string
   description = "Prefix for the storage account name"
-  default = "stacc"
+  default = "proj1"
   
 }
 
