@@ -17,14 +17,6 @@ variable "account_replication_type" {
 
 }
 
-variable "key_vault_name" {
-  type = string
-  description = "The name of the key vault"  
-}
 
-variable "key_name" {
-  type = string
-  description = "The name of the key in the key vault" 
-}
 
 
